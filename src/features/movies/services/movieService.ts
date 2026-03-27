@@ -8,7 +8,7 @@ const placeholderPoster =
   'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=600&q=80'
 const placeholderBackdrop =
   'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1400&q=80'
-// const sampleVideo = 'https://www.w3schools.com/html/mov_bbb.mp4'
+const sampleVideo = 'https://www.w3schools.com/html/mov_bbb.mp4'
 
 const endpointByCategory: Record<MovieCategory, string> = {
   trending: '/trending/movie/week',
@@ -35,7 +35,7 @@ const mapTmdbMovie = (movie: Record<string, unknown>): Movie => ({
   releaseDate: String(movie?.year ?? movie?.release_date ?? '2024-01-01'),
   durationMinutes: Number(movie?.runtime ?? 120),
   categories: Array.isArray(movie?.genres) ? movie?.genres : [],
-  videoUrl: Array.isArray(movie?.torrents) ? movie?.torrents : [],
+  videoUrl: sampleVideo,
 })
 
 const paginate = <T,>(items: T[], page: number): PaginatedResponse<T> => {

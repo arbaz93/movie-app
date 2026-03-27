@@ -1,20 +1,20 @@
 export type MovieCategory = 'trending' | 'popular' | 'topRated'
-export type Torrent = {
-  url:string,
-  hash:string,
-  peers:number,
-  seeds: number,
-  quality:string,
-  size:string,
-  size_bytes:number,
-  audio_channel:string,
-  bit_depth:string,
-  date_uploaded:string,
-  date_uploaded_unix:number,
-  is_repack:string,
-  type:string,
-  video_codex:string
-}
+// export type Torrent = {
+//   url:string,
+//   hash:string,
+//   peers:number,
+//   seeds: number,
+//   quality:string,
+//   size:string,
+//   size_bytes:number,
+//   audio_channel:string,
+//   bit_depth:string,
+//   date_uploaded:string,
+//   date_uploaded_unix:number,
+//   is_repack:string,
+//   type:string,
+//   video_codex:string
+// }
 export interface Movie {
   id: number
   title: string
@@ -25,7 +25,7 @@ export interface Movie {
   releaseDate: string
   durationMinutes: number
   categories: MovieCategory[]
-  videoUrl: Torrent[] | null
+  videoUrl: string
 }
 
 export interface PaginatedResponse<T> {
