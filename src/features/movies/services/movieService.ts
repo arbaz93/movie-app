@@ -90,11 +90,11 @@ export const movieService = {
     }
 
     try {
-      const imdb_id = await this.getImdbIdByTmdbId(movieId)
-      const response = await ytsClient.get(`/movie_details.json?imdb_id=${imdb_id}`)
-      // const response = await apiClient.get(`/movie/${movieId}`)
-      console.log(response.data.data.movie)
-      return mapTmdbMovie(response.data.data.movie as Record<string, unknown>)
+      // const imdb_id = await this.getImdbIdByTmdbId(movieId)
+      // const response = await ytsClient.get(`/movie_details.json?imdb_id=${imdb_id}`)
+      const response = await apiClient.get(`/movie/${movieId}`)
+      // return mapTmdbMovie(response.data.data.movie as Record<string, unknown>)
+      return mapTmdbMovie(response.data as Record<string, unknown>)
     } catch {
       return null
     }
