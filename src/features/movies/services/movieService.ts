@@ -1,5 +1,5 @@
 import { apiClient, hasTmdbCredentials } from '@/services/apiClient'
-import { ytsClient } from "@/services/ytsClient.ts";
+// import { ytsClient } from "@/services/ytsClient.ts";
 import { mockMovies } from '@/services/mockData'
 import type { Movie, MovieCategory, PaginatedResponse } from '@/types/movie'
 
